@@ -14,42 +14,42 @@ export default{
             {
                 slug:'originals',
                 title:'Originais da Plataforma',
-                items: await basicFetch(``)
+                items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug:'trending',
                 title:'Recomendados',
-                items: await basicFetch(``)
+                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug:'toprated',
                 title:'Em alta',
-                items: await basicFetch(``)
+                items: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug:'action',
                 title:'Filmes de Ação',
-                items: await basicFetch(``)
+                items: await basicFetch(`/discover/movie?width_genres=28&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug:'comedy',
                 title:'Filmes de Comédia',
-                items: await basicFetch(``)
+                items: await basicFetch(`/discover/movie?width_genres=35&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug:'horror',
                 title:'Filmes de Terror',
-                items: await basicFetch(``)
+                items: await basicFetch(`/discover/movie?width_genres=27&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug:'romance',
                 title:'Filmes de Romance',
-                items: await basicFetch(``)
+                items: await basicFetch(`/discover/movie?width_genres=10749&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug:'documentary',
                 title:'Documentarios',
-                items: await basicFetch(``)
+                items: await basicFetch(`/discover/movie?width_genres=99&language=pt-BR&api_key=${API_KEY}`)
             },
             
         ]
