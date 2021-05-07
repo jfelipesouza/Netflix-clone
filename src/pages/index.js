@@ -23,7 +23,7 @@ export default function Reactflix(){
             let chosen = originals[0].items.results[randomChoise]
             let chosenInfo = await Api.getMovieInfo(chosen.id,'tv')
             
-            console.log(chosenInfo)
+            setFeatureData(chosenInfo)
 
         }
         loadAll()
@@ -33,7 +33,9 @@ export default function Reactflix(){
         <Container >
 
             {
-                featureData&&<FeaturedMovie/>
+                featureData
+                    &&
+                <FeaturedMovie item = {featureData}/>
             }
 
             <section className='listmovie'  > 
