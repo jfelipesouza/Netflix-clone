@@ -21,7 +21,10 @@ export default function Reactflix(){
             let originals = list.filter(i=>i.slug==='originals')
             let randomChoise = Math.floor(Math.random()*(originals[0].items.results.length - 1))
             let chosen = originals[0].items.results[randomChoise]
-            console.log(chosen)
+            let chosenInfo = await Api.getMovieInfo(chosen.id,'tv')
+            
+            console.log(chosenInfo)
+
         }
         loadAll()
     },[])
