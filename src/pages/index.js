@@ -7,11 +7,21 @@ import FeaturedMovie from '../components/featureMovie'
 export default function Reactflix(){
     const [movieList,setMovieList] = useState([])
     const [featureData,setFeatureData] = useState(null)
+    
     useEffect(()=>{
         const loadAll = async ()=> {
+            
             // Pegando a lista total
+            
             let list = await Api.getHomeList();
             setMovieList(list)
+            
+            // Pegando o Feature
+
+            let originals = list.filter(i=>i.slug==='originals')
+            let randomChoise = Math.floor(Math.random()*(originals[0].items.results.length - 1))
+            let chosen = originals[0].items.results[randomChoise]
+            console.log(chosen)
         }
         loadAll()
     },[])
