@@ -3,6 +3,7 @@ import MovieRow from '../components/list';
 import Api from './api'
 import {Container} from './styles'
 import FeaturedMovie from '../components/featureMovie'
+import Header from '../components/headers';
 
 export default function Reactflix(){
     const [movieList,setMovieList] = useState([])
@@ -32,6 +33,9 @@ export default function Reactflix(){
     return(
         <Container >
 
+            <Header>
+                
+            </Header>
             {
                 featureData
                     &&

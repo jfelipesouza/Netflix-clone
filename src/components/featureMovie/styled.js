@@ -49,7 +49,7 @@ export const Featured = styled.section`
     .feature--genres{
         margin-top:15px;
         font-size:18px;
-        color:#999999;
+        color:#f8f8f8;
     }
 
 `;
