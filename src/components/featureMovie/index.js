@@ -28,19 +28,20 @@ export default function FeaturedMovie(props){
                         <div className='feature--info'>
                             
                             <div className='feature--points'>{props.item.vote_average} pontos</div> 
-                            <div className='featue--year'>{firstDate.getFullYear()}</div> 
-                            <div className='featue--seasons'>{props.item.number_of_seasons} {props.item.number_of_seasons>1?'temporadas':"temporada"}</div>
+                            <div className='feature--year'>{firstDate.getFullYear()}</div> 
+                            <div className='feature--seasons'>{props.item.number_of_seasons} {props.item.number_of_seasons>1?'temporadas':"temporada"}</div>
+
                         </div>
 
-                        <div className = 'feature--descrition'>{props.item.overview}</div>
+                        <div className = 'feature--description'>{props.item.overview}</div>
                         
+                        <div className = 'feature-genres'>Gêneros: {generes.join(', ')}</div>
+                    
                         <FeaturedButton>
                             <a href='' style={{marginLeft:10,marginRight:10}}>Assistir</a>
                             <a href=''>Minha Lista</a>
                         </FeaturedButton>
                         
-                        <div className = 'feature-genres'>Gêneros: {generes.join(', ')}</div>
-                    
                     </div>
                 </div>
                 
