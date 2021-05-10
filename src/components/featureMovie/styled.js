@@ -18,3 +18,7 @@ export const Featured = styled.section`
         background: linear-gradient(to right, #111 30%,transparent 70%);
     }
 `;
+
+export const FeaturedButton = styled.div`
+    justify-content:space-between;
+`;

@@ -1,11 +1,15 @@
 import React from 'react'
-import {Container, Featured} from './styled'
+import {Container, Featured, FeaturedButton} from './styled'
 
 export default function FeaturedMovie(props){
     
     let firstDate = new Date(props.item.first_air_date)
-    let generes = ''
+    let generes = []
     
+    for(let i in props.item.genres){
+        generes.push(props.item.genres[i].name)
+    }
+
     return(
         <Container>
             <Featured 
@@ -30,11 +34,12 @@ export default function FeaturedMovie(props){
 
                         <div className = 'feature--descrition'>{props.item.overview}</div>
                         
-                        <div className = 'Buttons'>
+                        <FeaturedButton>
+                            <a href='' style={{marginLeft:10,marginRight:10}}>Assistir</a>
+                            <a href=''>Minha Lista</a>
+                        </FeaturedButton>
                         
-                        </div>
-                        
-                        <div className = 'feature-genres'>Gêneros:{}</div>
+                        <div className = 'feature-genres'>Gêneros: {generes.join(', ')}</div>
                     
                     </div>
                 </div>
