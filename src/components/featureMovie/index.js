@@ -35,11 +35,11 @@ export default function FeaturedMovie(props){
 
                         <div className = 'feature--description'>{props.item.overview}</div>
                         
-                        <div className = 'feature-genres'>Gêneros: {generes.join(', ')}</div>
+                        <div className = 'feature--genres'>Gêneros: {generes.join(', ')}</div>
                     
                         <FeaturedButton>
-                            <a href='' style={{marginLeft:10,marginRight:10}}>Assistir</a>
-                            <a href=''>Minha Lista</a>
+                            <a href= {`/watch/${props.item.id}`} className={'watchButton'}> ► Assistir</a>
+                            <a href={`/list/add/${props.item.id}`} className={'myListButton'}> + Minha Lista</a>
                         </FeaturedButton>
                         
                     </div>

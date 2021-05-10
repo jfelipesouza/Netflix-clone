@@ -1,21 +1,24 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  
 `;
 
 export const Featured = styled.section`
-    height: 100vh;
+    height: 90vh;
     
     .feature--vertical{
         width: inherit;
         height: inherit;
         background: linear-gradient(to top, #111 10%, transparent 90%);
     }
-    .feature--vertical .feature--horizontal{
+    .feature--horizontal{
         width: inherit;
         height: inherit;
         background: linear-gradient(to right, #111 30%,transparent 70%);
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding-left:30px
     }
     .feature--name{
         font-size:60px;
@@ -43,10 +46,39 @@ export const Featured = styled.section`
         max-width:40%
     }
 
+    .feature--genres{
+        margin-top:15px;
+        font-size:18px;
+        color:#999999;
+    }
+
 `;
 
 export const FeaturedButton = styled.div`
-    a{
-     
+    margin-top:15px;
+
+
+    .watchButton,.myListButton{
+        display: inline-block;
+        font-size:20px;
+        font-weight:bold;
+        padding: 12px 25px;
+        border-radius:5px;
+        text-decoration:none;
+        margin-right:10px;
+        opacity:1;
+        transition: all ease-in-out 0.2s
+    }
+    .watchButton:hover,.myListButton:hover{
+        opacity:0.7;
+    }
+    .watchButton{
+        background-color:#FFF;
+        color:#000
+    }
+
+    .myListButton{
+        background-color:#333;
+        color:#FFF;
     }
 `;
