@@ -4,6 +4,7 @@ import Api from './api'
 import {Container} from './styles'
 import FeaturedMovie from '../components/featureMovie'
 import Header from '../components/headers';
+import Footer from '../components/footer';
 
 export default function Reactflix(){
     const [movieList,setMovieList] = useState([])
@@ -70,6 +71,9 @@ export default function Reactflix(){
                 ))}
             </section>
         
+
+            <Footer/>
+
         </Container>
     )
 }
