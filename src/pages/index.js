@@ -8,7 +8,8 @@ import Header from '../components/headers';
 export default function Reactflix(){
     const [movieList,setMovieList] = useState([])
     const [featureData,setFeatureData] = useState(null)
-    
+    const [headerScroll,setHeaderScroll] = useState('transparent')
+
     useEffect(()=>{
         const loadAll = async ()=> {
             
@@ -28,14 +29,32 @@ export default function Reactflix(){
 
         }
         loadAll()
+    },[]);
+    //Monitorando o scroll da pagina
+    
+    useEffect(()=>{
+        const scrollListener = () => {
+            if(window.scrollY > 10){
+                setHeaderScroll('#111')
+            }else{
+                setHeaderScroll('transparent')
+            }
+        }
+
+        window.addEventListener('scroll',scrollListener)
+    
+        return ()=>{
+            window.removeEventListener('scroll',scrollListener)
+        }
     },[])
+
 
     return(
         <Container >
 
-            <Header>
-                
-            </Header>
+            <Header bgcolor={headerScroll}/>
+            
+
             {
                 featureData
                     &&
