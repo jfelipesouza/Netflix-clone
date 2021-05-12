@@ -31,6 +31,7 @@ export default function Reactflix(){
         }
         loadAll()
     },[]);
+
     //Monitorando o scroll da pagina
     
     useEffect(()=>{
