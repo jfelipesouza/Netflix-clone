@@ -8,6 +8,9 @@ export default function Footer(props){
     return(
         <FooterContainer>
             <p>
+                Direitos de imagem Netflix
+            </p>
+            <p>
                 Feito por João Felipe
                 
                 <ReactIcon>
@@ -16,12 +19,7 @@ export default function Footer(props){
                 
             </p>
             <p>05/2021</p>
-            <p>
-                Direitos de imagem Netflix
-                <span id='Netflix'>
-                    <SiNetflix/>
-                </span> 
-            </p>
+            
         </FooterContainer>
     )
 }

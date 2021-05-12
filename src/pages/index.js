@@ -69,11 +69,12 @@ export default function Reactflix(){
                     </MovieRow>
 
                 ))}
+                <Footer/>
+    
             </section>
         
 
-            <Footer/>
-
+ 
         </Container>
     )
 }
